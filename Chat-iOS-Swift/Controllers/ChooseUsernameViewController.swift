@@ -41,13 +41,13 @@ class ChooseUsernameViewController: UITableViewController {
     }
     
     func cancelButtonPressed(sender: UIBarButtonItem) {
-        let cell: TextFieldCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as TextFieldCell
+        let cell: TextFieldCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! TextFieldCell
         cell.textField.resignFirstResponder()
         delegate?.chooseUsernameViewControllerDidCancel(self)
     }
     
     func doneButtonPressed(sender: UIBarButtonItem) {
-        let cell: TextFieldCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as TextFieldCell
+        let cell: TextFieldCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! TextFieldCell
         cell.textField.resignFirstResponder()
         delegate?.chooseUsernameViewController(self, didPickUsername: cell.textField.text)
     }
